@@ -96,7 +96,7 @@ export class MyNavBar extends Component {
                                                     <Link
                                                         activeClass="active"
                                                         to={link.ref}
-                                                        spy={false}
+                                                        spy={true}
                                                         smooth={true}
                                                         //offset={-70}
                                                         duration={1000}

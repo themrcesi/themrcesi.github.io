@@ -17,8 +17,8 @@ ReactDOM.render(
     <MyNavBar></MyNavBar>
     <Intro></Intro>
     <About></About>
-    {/* <Projects></Projects>
-    <Contact></Contact>
+    <Projects></Projects>
+    {/* <Contact></Contact>
     <BackToTop></BackToTop>
     <Preloader></Preloader> */}
   </React.Fragment>,
