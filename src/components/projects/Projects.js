@@ -1,50 +1,24 @@
 import React from 'react';
 
 import "./Projects.css"
-import { Card } from 'react-bootstrap';
+//import { Card } from 'react-bootstrap';
 
-/* //import vmarine
-import vmarine from "../img/Vmarine.jpg";
-import vmarine1 from "../img/vmarine-1.png";
-import vmarine2 from "../img/vmarine-2.png";
-import vmarine3 from "../img/vmarine-3.png";
-import vmarine4 from "../img/vmarine-4.png";
-import vmarine5 from "../img/vmarine-5.png";
-import vmarine6 from "../img/vmarine-6.png";
-import vmarine7 from "../img/vmarine-7.png";
-
-//aguadeluz pics
-import aguaDeLuz from "../img/aguaDeLuz.png";
-import aguaDeLuz1 from "../img/aguaDeLuz-1.png";
-import aguaDeLuz2 from "../img/aguaDeLuz-2.png";
-import aguaDeLuz3 from "../img/aguaDeLuz-3.png";
-import aguaDeLuz4 from "../img/aguaDeLuz-4.png";
-
-//import todo
-import todoList from "../img/todolist.png";
-import todoList1 from "../img/todo-1.png";
-import todoList2 from "../img/todo-2.png";
-import todoList3 from "../img/todo-3.png";
-
-//import amtbw
-import amtbw from "../img/amtbw.png";
-
-//import medlingos
-import medlingos from "../img/medlingos.jpg";
-import medlingos1 from "../img/medlingos-1.jpg";
-import medlingos2 from "../img/medlingos-2.jpg";
-import medlingos3 from "../img/medlingos-3.jpg";
-import medlingos4 from "../img/medlingos-4.jpg";
+//ViaDe
+/* import viade from process.env.PUBLIC_URL + "/img/viade.png";
+import viade_dashboard from process.env.PUBLIC_URL + "/img/viade_dashboard.png";
+import viade_upload from process.env.PUBLIC_URL + "/img/viade_uplaod.png";
+import viade_myRoutes from process.env.PUBLIC_URL + "/img/viade_myRoutes.png";
+import viade_modal from process.env.PUBLIC_URL + "/img/viade_modal.png"; */
 
 //import landing page
-import product from "../img/product.png"; */
+//import product from "../img/product.png"; 
 
 class Portfolio extends React.Component {
 
     constructor(props) {
         super(props);
         this.projects = [
-            { title: "Prueba", categories: "Prueba Prueba", mainPicture: "", pictures: [] },
+            { title: "Prueba", categories: "Prueba Prueba", mainPicture: "https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg", pictures: ["https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg","https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg"] },
         ];
     };
 
@@ -57,20 +31,20 @@ class Portfolio extends React.Component {
                             <div className="title-box text-center">
                                 <h3 className="title-a">
                                     Portfolio
-                    </h3>
+                                </h3>
                                 <p className="subtitle-a">
                                     Check Out My Latest Projects.
-                    </p>
+                                </p>
                                 <div className="line-mf"></div>
                             </div>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-md-4">
-                            <div className="work-box">
-                                <a href="https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg" data-lightbox="gallery-vmarine">{/*href={vmarine}*/}
-                                    <Card>
-                                        <Card.Img variant="top" src="https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg" />
+                            <div className="work-box" onClick={() => this.isOpen=true}>
+                                <a href={this.projects[0].mainPicture} data-lightbox="gallery-vmarine">{/*href={vmarine}*/}
+                                    {/* <Card>
+                                        <Card.Img className="img-fluid" variant="top" src="https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg" />
                                         <Card.Body>
                                             <Card.Title>ViaDe</Card.Title>
                                             <Card.Subtitle>React SOLID Redux Leaflet</Card.Subtitle>
@@ -82,10 +56,10 @@ class Portfolio extends React.Component {
                                             <Card.Link href="#">Check it out!</Card.Link>
                                         </Card.Body>
                                     </Card>
-
-                                    {/* <div className="work-img">
-                                                                 <img src={vmarine} alt="" className="img-fluid"/>
- ºººº                               </div>
+ */}
+                                    <div className="work-img">
+                                        <img src={process.env.PUBLIC_URL + "/img/viade"} alt="" className="img-fluid" />
+                                    </div>
                                     <div className="work-content">
                                         <div className="row">
                                             <div className="col-sm-8">
@@ -96,15 +70,12 @@ class Portfolio extends React.Component {
                                             </div>
                                             <div className="col-sm-4">
                                                 <div className="w-like">
-                                                    <span className="ion-ios-plus-outline"></span>
+                                                    <span className="ion-ios-plus-outline">Hola</span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> */}
+                                    </div>
                                 </a>
-                                <a href={"https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg"} data-lightbox="gallery-vmarine" style={{ display: "none" }}>jsx-a11y/anchor-has-content warning</a>
-                                <a href="https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg" data-lightbox="gallery-vmarine" style={{ display: "none" }}>jsx-a11y/anchor-has-content warning</a>
-                                <a href="https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg" data-lightbox="gallery-vmarine" style={{ display: "none" }}>jsx-a11y/anchor-has-content warning</a>
                             </div>
                         </div>
                     </div>

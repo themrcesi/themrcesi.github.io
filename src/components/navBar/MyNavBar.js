@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import $ from "jquery";
 import "bootstrap";
-import Scrollspy from "react-scrollspy";
+//import Scrollspy from "react-scrollspy";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 
