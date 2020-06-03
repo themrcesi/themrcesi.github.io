@@ -1,21 +1,24 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Card } from 'react-bootstrap';
 
-export default class Project extends Component {
+export function Project(props) {
 
-    constructor(props) {
-        super(props);
-        this.title = props.title;
-        this.categories = props.categories;
-        this.text = props.text;
-        this.mainPicture = props.mainPicture;
-        this.pictures = props.mainPicture.concat(props.pictures);
-    }
+    const { title, categories, text, mainPicture, pictures, github, deploy } = props.project;
 
-    render() {
-        return (
-            <div>
-                
+    return (
+        <Card className="work-box">
+            <div className="work-img">
+                <Card.Img className="img-fluid" variant="top" src={mainPicture} />
             </div>
-        )
-    }
+            <Card.Body className="work-content">
+                <Card.Title className="w-title">{title}</Card.Title>
+                <Card.Subtitle className="w-category">{categories.map((categorie) => categorie + " ")}</Card.Subtitle>
+                <Card.Text>
+                    {text}
+                </Card.Text>
+                <Card.Link href={github}>Github</Card.Link>
+                {deploy && <Card.Link href={deploy}>Check it out!</Card.Link>}
+            </Card.Body>
+        </Card>
+    )
 }
