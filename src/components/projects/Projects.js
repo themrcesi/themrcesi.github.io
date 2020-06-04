@@ -34,6 +34,15 @@ export function Portfolio() {
             pictures: [],
             github: "https://github.com/themrcesi/C--Compiler",
         },
+        {
+            title: "Final Degree Project",
+            categories: ["C#", "Simulated Annealing", "Linear programming", "Optimization", "Latex"],
+            text: "Development of aggregation methods of partially ordered sets.",
+            mainPicture: process.env.PUBLIC_URL + "/img/posets.png",
+            pictures: [],
+            github: "https://github.com/themrcesi/UNIMODE",
+            deploy: process.env.PUBLIC_URL + "/files/tfg.pdf"
+        },
     ];
 
     return (
@@ -54,8 +63,8 @@ export function Portfolio() {
                 </div>
                 <div className="row">
                     {projects.map((project, key) => (
-                        <div className="col-md-4">
-                            <Project key={key} project={project}></Project>
+                        <div key={key} className="col-md-4">
+                            <Project project={project}></Project>
                         </div>
                     ))}
                 </div>

@@ -7,19 +7,20 @@ class About extends React.Component{
         super();
         this.state = {
             skills:[
-                {id:"HTML5_skill", content: "HTML5",porcentage: "80%", value: "80"},
-                {id:"CSS3_skill", content: "CSS3",porcentage: "75%", value: "75"},
-                {id:"JavaScript_skill", content: "JavaScript",porcentage: "90%", value: "90"},
-                {id:"PHP_skill", content: "PHP",porcentage: "70%", value: "70"},
-                {id:"ReactJS_skill", content: "ReactJS",porcentage: "80%", value: "80"},
-                {id:"Python_skill", content: "Python",porcentage: "75%", value: "75"},
-                {id:"VanillaJS_skill", content: "VanillaJS",porcentage: "85%", value: "85"},
-                {id:"Wordpress_skill", content: "Wordpress",porcentage: "80%", value: "80"}
+                {id:"Java_skill", content: "Java", value: "75"},
+                {id:"Python_skill", content: "Python", value: "65"},
+                {id:"C#_skill", content: "C#", value: "65"},
+                {id:"React_skill", content: "ReactJS", value: "70"},
+                {id:"LaTeX_skill", content: "LaTeX", value: "80"},
+                {id:"analytical", content: "Analytical skills", value: "85"},
+                {id:"solving_skill", content: "Problem solving", value: "80"},
+                {id:"Teamwork_skill", content: "Team work", value: "85"},
+                {id:"Leadership_skill", content: "Leadership", value: "95"},
             ],
             about_me:[
-                {id: "first-p-about",content: "Software Engineer who loves to transform ideas into reality using code. I am passionate about using Javascript and Animation Libraries to create awesome user experiences."},
-                {id: "second-p-about", content: "With over two years of experience developing web applications using the latest front-end and back-end technologies."},
-                {id: "third-p-about", content: "Motivated designer and developer with experience creating custom websites with ReactJs, JavaScript, HTML5, and CSS3. Strong collaboration skills and proven history of application development. Wordpress and MySQL."}
+                {id: "first-p-about",content: "Software Engineer who loves everything related to technology. I am passionate about Artificial Intelligence and particularly all its real-life applications."},
+                {id: "second-p-about", content: "Sports and music have always been an essential part of my life."},
+                {id: "third-p-about", content: "Always ready to learn new things. If I have a goal, I don't stop until I get it."}
             ]
         }
     }
@@ -41,10 +42,10 @@ class About extends React.Component{
                                             </div>
                                              <div className="col-sm-6 col-md-7">
                                                 <div className="about-info">
-                                                <p><span class="title-s">Name: </span> <span>César García Cabeza</span></p>
-                                                <p><span class="title-s">Profile: </span> <span>Software Engineer</span></p>
-                                                <p><span class="title-s">Email: </span> <span>UO257314@uniovi.es</span></p>
-                                                <p><span class="title-s">Phone: </span> <span>(+34) 648 035 992</span></p>
+                                                <p><span className="title-s">Name: </span> <span>César García Cabeza</span></p>
+                                                <p><span className="title-s">Profile: </span> <span>Software Engineer</span></p>
+                                                <p><span className="title-s">Email: </span> <span>UO257314@uniovi.es</span></p>
+                                                <p><span className="title-s">Phone: </span> <span>(+34) 648 035 992</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -54,9 +55,9 @@ class About extends React.Component{
                                                 this.state.skills.map(skill => {
                                                     return(
                                                         <React.Fragment key={skill.id}>
-                                                            <span>{skill.content}</span> <span className="pull-right">{skill.porcentage}</span>
+                                                            <span>{skill.content}</span> <span className="pull-right"></span>
                                                             <div className="progress">
-                                                                <div className="progress-bar" role="progressbar" style={{width: skill.porcentage}} aria-valuenow={skill.value} aria-valuemin="0" aria-valuemax="100"></div>
+                                                                <div className="progress-bar" role="progressbar" style={{width: skill.value+"%"}} aria-valuenow={skill.value} aria-valuemin="0" aria-valuemax="100"></div>
                                                             </div>
                                                         </React.Fragment>
                                                     );

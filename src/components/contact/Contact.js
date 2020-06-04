@@ -30,7 +30,7 @@ export function Contact(props) {
     };
 
     return (
-        <section className="paralax-mf footer-paralax bg-image sect-mt4 route" style={{ backgroundImage: "url(" + process.env.PUBLIC_URL + "/img/background.jpg)" }}>
+        <section id="contact" className="paralax-mf footer-paralax bg-image sect-mt4 route" style={{ backgroundImage: "url(" + process.env.PUBLIC_URL + "/img/background.jpg)" }}>
             <div className="overlay-mf"></div>
             <div className="container">
                 <div className="row">

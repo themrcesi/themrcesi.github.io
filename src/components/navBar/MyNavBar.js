@@ -13,27 +13,20 @@ export class MyNavBar extends Component {
         super(props);
         this.links = [
             { name: "HOME", ref: "home" },
-            { name: "RESUME", ref: "" },
             { name: "ABOUT", ref: "about" },
             { name: "PROJECTS", ref: "projects" },
-            { name: "CONTACT", re: "contact" }
+            { name: "CONTACT", ref: "contact" },
+            { name: "RESUME", ref: "/files/cv.pdf" }
         ];
     }
 
     componentDidMount() {
-        const nav = $('nav');
-        let navHeight = nav.outerHeight();
 
         $('.navbar-toggler').on('click', function () {
             if (!$('#mainNav').hasClass('navbar-reduce')) {
                 $('#mainNav').addClass('navbar-reduce');
             }
         })
-
-        /* $('body').scrollspy({
-            target: '#mainNav',
-            offset: navHeight
-        }); */
 
         $('.js-scroll').on("click", function () {
             $('.navbar-collapse').collapse('hide');
@@ -82,18 +75,17 @@ export class MyNavBar extends Component {
                         <Navbar.Toggle aria-controls="navbarDefault" />
                         <Navbar.Collapse className="justify-content-end" id="navbarDefault">
                                 {this.links.map((link, key) => {
-                                    console.log(link);
                                     return (
-                                        link.name === "Resume" ?
+                                        link.name === "RESUME" ?
                                             <Nav.Item key={key}>
-                                                <Nav.Link>
-                                                    {link.name}
+                                                <Nav.Link className="js-scroll" target="blank" href={link.ref} >
+                                                    <a>{link.name}</a>
                                                 </Nav.Link>
                                             </Nav.Item> :
                                             <Nav.Item key={key}>
-                                                <Nav.Link className="js-scroll" href={link.ref}>
+                                                <Nav.Link className="js-scroll">
                                                     <Link
-                                                        activeClass="active"
+                                                        activeClass="current-navlink"
                                                         to={link.ref}
                                                         spy={true}
                                                         smooth={true}

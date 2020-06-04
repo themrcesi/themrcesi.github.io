@@ -20,7 +20,7 @@ export class Intro extends React.Component {
             <div className="container">
               <h1 className="intro-title mb-4">Hello, I am César García Cabeza</h1>
               <p className="intro-subtitle"><span className="text-slider-items">
-              </span><strong className="text-slider"><Typed strings={["Software Engineer", "Curious about Artificial Intelligence", "Sportsman"]} typeSpeed={80} backDelay={1100} backSpeed={30} loop /></strong></p>
+              </span><strong className="text-slider"><Typed strings={["Software Engineer", "Curious about Artificial Intelligence", "Always ready to learn new things"]} typeSpeed={80} backDelay={1100} backSpeed={30} loop /></strong></p>
               <p className="pt-3">
                 <Button className="btn-primary js-scroll px-4">
                   <Link

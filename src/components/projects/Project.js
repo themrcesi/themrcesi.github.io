@@ -22,11 +22,11 @@ export function Project(props) {
                         {text}
                     </Card.Text>
                 </Card.Body>
-                <Card.Footer>
-                    <Card.Link href={github}>Github</Card.Link>
-                    {deploy && <Card.Link href={deploy}>Check it out!</Card.Link>}
-                </Card.Footer>
             </div>
+            <Card.Footer>
+                    <Card.Link target="blank" href={github}>Github</Card.Link>
+                    {deploy && <Card.Link target="blank" href={deploy}>Check it out!</Card.Link>}
+            </Card.Footer>
             <FsLightbox
                 toggler={toggler}
                 sources={[...pictures, mainPicture]}

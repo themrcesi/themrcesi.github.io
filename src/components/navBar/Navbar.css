@@ -2,6 +2,10 @@
   NAVBAR
   */
 
+  .current-navlink {
+    font-weight: bold;
+  }
+
   .navbar-b {
     transition: all .5s ease-in-out;
     background-color: transparent;
