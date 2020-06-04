@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import $ from "jquery";
 import "bootstrap";
-//import Scrollspy from "react-scrollspy";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 
@@ -31,10 +30,10 @@ export class MyNavBar extends Component {
             }
         })
 
-        $('body').scrollspy({
+        /* $('body').scrollspy({
             target: '#mainNav',
             offset: navHeight
-        });
+        }); */
 
         $('.js-scroll').on("click", function () {
             $('.navbar-collapse').collapse('hide');
@@ -42,17 +41,17 @@ export class MyNavBar extends Component {
 
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 50) {
-                document.querySelector('.navbar-expand-md').classList.add('navbar-reduce');
-                document.querySelector('.navbar-expand-md').classList.remove('navbar-trans');
+                document.querySelector('#mainNav').classList.add('navbar-reduce');
+                document.querySelector('#mainNav').classList.remove('navbar-trans');
                 //this.setState({ logo: logo2 });
             } else {
-                document.querySelector('.navbar-expand-md').classList.add('navbar-trans');
-                document.querySelector('.navbar-expand-md').classList.remove('navbar-reduce');
+                document.querySelector('#mainNav').classList.add('navbar-trans');
+                document.querySelector('#mainNav').classList.remove('navbar-reduce');
                 //this.setState({ logo: logo1 });
             }
         });
 
-        $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
+        /* $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
             if (window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && window.location.hostname === this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -63,7 +62,7 @@ export class MyNavBar extends Component {
                     return false;
                 }
             }
-        });
+        }); */
 
         $('.js-scroll').on("click", function () {
             $('.navbar-collapse').collapse('hide');

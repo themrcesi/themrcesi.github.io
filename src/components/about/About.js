@@ -1,5 +1,6 @@
 import React from 'react';
 //import myImage from "../img/myImage.jpg";
+import "./About.css"
 
 class About extends React.Component{
     constructor(){
@@ -35,20 +36,20 @@ class About extends React.Component{
                                         <div className="row">
                                             <div className="col-sm-6 col-md-5" style={{margin: "0 auto"}}>
                                                 <div className="about-img" style={{textAlign: "center"}}>
-                                                    {/*<img src={myImage} className="img-fluid rounded b-shadow-a" alt=""/>*/}
+                                                    <img src={process.env.PUBLIC_URL+"/img/foto.jpg"} className="img-fluid rounded b-shadow-a" alt=""/>
                                                 </div>
                                             </div>
-                                            {/* <div className="col-sm-6 col-md-7">
+                                             <div className="col-sm-6 col-md-7">
                                                 <div className="about-info">
-                                                <p><span class="title-s">Name: </span> <span>Frank Izquierdo</span></p>
-                                                <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                                                <p><span class="title-s">Email: </span> <span>contact@example.com</span></p>
-                                                <p><span class="title-s">Phone: </span> <span>(617) 557-0089</span></p>
+                                                <p><span class="title-s">Name: </span> <span>César García Cabeza</span></p>
+                                                <p><span class="title-s">Profile: </span> <span>Software Engineer</span></p>
+                                                <p><span class="title-s">Email: </span> <span>UO257314@uniovi.es</span></p>
+                                                <p><span class="title-s">Phone: </span> <span>(+34) 648 035 992</span></p>
                                                 </div>
-                                            </div> */}
+                                            </div>
                                         </div>
                                         <div className="skill-mf">
-                                            {/* <p className="title-s">Skill</p> */}
+                                            <p className="title-s">Skills</p>
                                             {
                                                 this.state.skills.map(skill => {
                                                     return(

@@ -11,6 +11,8 @@ import BackToTop from './components/backToTop/BackToTop';
 import Preloader from './components/preloader/Preloader'; */
 
 import "./style.css";
+import {Contact} from './components/contact/Contact';
+import BackToTop from './components/backToTop/BackToTop';
 
 ReactDOM.render(
   <React.Fragment>
@@ -18,9 +20,9 @@ ReactDOM.render(
     <Intro></Intro>
     <About></About>
     <Projects></Projects>
-    {/* <Contact></Contact>
+    <Contact></Contact>
     <BackToTop></BackToTop>
-    <Preloader></Preloader> */}
+    {/*<Preloader></Preloader> */}
   </React.Fragment>,
   document.getElementById('root')
 );
