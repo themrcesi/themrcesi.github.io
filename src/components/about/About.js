@@ -1,5 +1,4 @@
 import React from 'react';
-//import myImage from "../img/myImage.jpg";
 import "./About.css"
 
 class About extends React.Component{
@@ -44,7 +43,7 @@ class About extends React.Component{
                                                 <div className="about-info">
                                                 <p><span className="title-s">Name: </span> <span>César García Cabeza</span></p>
                                                 <p><span className="title-s">Profile: </span> <span>Software Engineer</span></p>
-                                                <p><span className="title-s">Email: </span> <span>UO257314@uniovi.es</span></p>
+                                                <p><span className="title-s">Email: </span> <span>cesareogarcia@hotmail.es</span></p>
                                                 <p><span className="title-s">Phone: </span> <span>(+34) 648 035 992</span></p>
                                                 </div>
                                             </div>

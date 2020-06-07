@@ -25,7 +25,7 @@ export class Intro extends React.Component {
                 <Button className="btn-primary js-scroll px-4">
                   <Link
                     activeClass="active"
-                    to="about"
+                    to="projects"
                     spy={true}
                     smooth={true}
                     offset={-100}
