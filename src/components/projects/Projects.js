@@ -28,7 +28,7 @@ export function Portfolio() {
         },
         {
             title: "C-- Compiler",
-            categories: ["Java", "ANTLR", "Lexical, Syntactical and Semantic Analysis", "Programming Language Desing"],
+            categories: ["Java", "ANTLR", "Lexical, Syntactical and Semantic Analysis", "Programming Language Design"],
             text: "Compiler for the C-- language developed in Java.",
             mainPicture: process.env.PUBLIC_URL + "/img/c--.png",
             pictures: [],
@@ -41,7 +41,6 @@ export function Portfolio() {
             mainPicture: process.env.PUBLIC_URL + "/img/posets.png",
             pictures: [],
             github: "https://github.com/themrcesi/UNIMODE",
-            deploy: process.env.PUBLIC_URL + "/files/tfg.pdf"
         },
     ];
 
