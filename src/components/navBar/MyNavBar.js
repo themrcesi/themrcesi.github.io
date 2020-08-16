@@ -4,47 +4,44 @@ import $ from "jquery";
 import "bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-
-import "./Navbar.css"
+import "./Navbar.css";
 
 export class MyNavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.links = [
+      { name: "HOME", ref: "home" },
+      { name: "ABOUT", ref: "about" },
+      { name: "PORTFOLIO", ref: "projects" },
+      { name: "CONTACT", ref: "contact" },
+      { name: "RESUME", ref: "/files/cv.pdf" },
+    ];
+  }
 
-    constructor(props) {
-        super(props);
-        this.links = [
-            { name: "HOME", ref: "home" },
-            { name: "ABOUT", ref: "about" },
-            { name: "PROJECTS", ref: "projects" },
-            { name: "CONTACT", ref: "contact" },
-            { name: "RESUME", ref: "/files/cv.pdf" }
-        ];
-    }
+  componentDidMount() {
+    $(".navbar-toggler").on("click", function () {
+      if (!$("#mainNav").hasClass("navbar-reduce")) {
+        $("#mainNav").addClass("navbar-reduce");
+      }
+    });
 
-    componentDidMount() {
+    $(".js-scroll").on("click", function () {
+      $(".navbar-collapse").collapse("hide");
+    });
 
-        $('.navbar-toggler').on('click', function () {
-            if (!$('#mainNav').hasClass('navbar-reduce')) {
-                $('#mainNav').addClass('navbar-reduce');
-            }
-        })
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 50) {
+        document.querySelector("#mainNav").classList.add("navbar-reduce");
+        document.querySelector("#mainNav").classList.remove("navbar-trans");
+        //this.setState({ logo: logo2 });
+      } else {
+        document.querySelector("#mainNav").classList.add("navbar-trans");
+        document.querySelector("#mainNav").classList.remove("navbar-reduce");
+        //this.setState({ logo: logo1 });
+      }
+    });
 
-        $('.js-scroll').on("click", function () {
-            $('.navbar-collapse').collapse('hide');
-        });
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 50) {
-                document.querySelector('#mainNav').classList.add('navbar-reduce');
-                document.querySelector('#mainNav').classList.remove('navbar-trans');
-                //this.setState({ logo: logo2 });
-            } else {
-                document.querySelector('#mainNav').classList.add('navbar-trans');
-                document.querySelector('#mainNav').classList.remove('navbar-reduce');
-                //this.setState({ logo: logo1 });
-            }
-        });
-
-        /* $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
+    /* $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
             if (window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && window.location.hostname === this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -57,57 +54,64 @@ export class MyNavBar extends Component {
             }
         }); */
 
-        $('.js-scroll').on("click", function () {
-            $('.navbar-collapse').collapse('hide');
-        });
-    }
+    $(".js-scroll").on("click", function () {
+      $(".navbar-collapse").collapse("hide");
+    });
+  }
 
-    scrollToTop = () => {
-        scroll.scrollToTop();
-    };
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
-    render() {
-        return (
-            <div>
-                <Navbar className="navbar-b navbar-trans fixed-top" id="mainNav" collapseOnSelect expand="md">
-                    <div className="container">
-                        <Navbar.Brand className="home-style">themrcesi</Navbar.Brand>
-                        <Navbar.Toggle aria-controls="navbarDefault" />
-                        <Navbar.Collapse className="justify-content-end" id="navbarDefault">
-                                {this.links.map((link, key) => {
-                                    return (
-                                        link.name === "RESUME" ?
-                                            <Nav.Item key={key}>
-                                                <Nav.Link className="js-scroll" target="blank" href={link.ref} >
-                                                    <a>{link.name}</a>
-                                                </Nav.Link>
-                                            </Nav.Item> :
-                                            <Nav.Item key={key}>
-                                                <Nav.Link className="js-scroll">
-                                                    <Link
-                                                        activeClass="current-navlink"
-                                                        to={link.ref}
-                                                        spy={true}
-                                                        smooth={true}
-                                                        //offset={-70}
-                                                        duration={1000}
-                                                    >
-                                                        {link.name}
-                                                    </Link>
-                                                </Nav.Link>
-                                            </Nav.Item>
+  render() {
+    return (
+      <div>
+        <Navbar
+          className="navbar-b navbar-trans fixed-top"
+          id="mainNav"
+          collapseOnSelect
+          expand="md"
+        >
+          <div className="container">
+            <Navbar.Brand className="home-style">themrcesi</Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbarDefault" />
+            <Navbar.Collapse className="justify-content-end" id="navbarDefault">
+              {this.links.map((link, key) => {
+                return link.name === "RESUME" ? (
+                  <Nav.Item key={key}>
+                    <Nav.Link
+                      className="js-scroll"
+                      target="blank"
+                      href={link.ref}
+                    >
+                      <a>{link.name}</a>
+                    </Nav.Link>
+                  </Nav.Item>
+                ) : (
+                  <Nav.Item key={key}>
+                    <Nav.Link className="js-scroll">
+                      <Link
+                        activeClass="current-navlink"
+                        to={link.ref}
+                        spy={true}
+                        smooth={true}
+                        //offset={-70}
+                        duration={1000}
+                      >
+                        {link.name}
+                      </Link>
+                    </Nav.Link>
+                  </Nav.Item>
+                );
 
-
-                                        /**/
-                                    );
-                                })}
-                        </Navbar.Collapse>
-                    </div>
-                </Navbar>
-            </div>
-        )
-    }
+                /**/
+              })}
+            </Navbar.Collapse>
+          </div>
+        </Navbar>
+      </div>
+    );
+  }
 }
 
 export default MyNavBar;
-
