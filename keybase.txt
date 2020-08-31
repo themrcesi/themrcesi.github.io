@@ -1,0 +1,386 @@
+==================================================================
+https://keybase.io/themrcesi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://themrcesi.github.io
+  * I am themrcesi (https://keybase.io/themrcesi) on keybase.
+  * I have a public key ASCAqCTHios01JliHD-5pmz4B-85lFQO5rE125yKhqaRbwo
+==================================================================
+https://keybase.io/themrcesi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://themrcesi.github.io
+  * I am themrcesi (https://keybase.io/themrcesi) on keybase.
+  * I have a public key ASCAqCTHios01JliHD-5pmz4B-85lFQO5rE125yKhqaRbwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010182a7d416b3c8150c7930f2bd3a0b3916d839d69acd82ca38e0a372cfb65313db0a",
+      "host": "keybase.io",
+      "kid": "012080a824c78a8b34d499621c3fb9a66cf807ef3994540ee6b135db9c8a86a6916f0a",
+      "uid": "a7d8dc968b66dba41a0dea9189ce7619",
+      "username": "themrcesi"
+    },
+    "merkle_root": {
+      "ctime": 1598906566,
+      "hash": "10878bff1c06f8c8d99f1b06595b6e096822c5f7693d12645e49826bff72a4d5aa1e94c101a8558b1795c8c9d50d38814ad67aea411e2a9c74b05b1ae0c360a3",
+      "hash_meta": "2223f5cb4a9a58fb78ea9d7c221b107d6a2845e03d12de39578ef0a6a8251dc2",
+      "seqno": 17436956
+    },
+    "service": {
+      "entropy": "6EJ6jqsqgtd04lSMGh0ubTCV",
+      "hostname": "themrcesi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1598906630,
+  "expire_in": 504576000,
+  "prev": "4bb6441ee8f559f84351c17a2ed5338211471d8ec6bd5939d8c4659d4de005d1",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggKgkx4qLNNSZYhw/uaZs+AfvOZRUDuaxNducioamkW8Kp3BheWxvYWTESpcCGMQgS7ZEHuj1WfhDUcF6LtUzghFHHY7GvVk52MRlnU3gBdHEILYhrbD3irR9RA6oZoPAkZZDNPOecZc9tYYnYlhsWl9JAgHCo3NpZ8RAgXDdhMfcIrupKL96jeqgzdiATZXyWc8LfUjRZwsf/+A0uXKwk0gapWRF6Rf4XKu+gPIFJjVNKuxEoLIH7sw2BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHm5W+Hk2iWKSr3pr+PHxXRS8BCvnF3B1mZYL6LftWCao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/themrcesi
+
+====================================================================================================================================
+https://keybase.io/themrcesi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://themrcesi.github.io
+  * I am themrcesi (https://keybase.io/themrcesi) on keybase.
+  * I have a public key ASCAqCTHios01JliHD-5pmz4B-85lFQO5rE125yKhqaRbwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010182a7d416b3c8150c7930f2bd3a0b3916d839d69acd82ca38e0a372cfb65313db0a",
+      "host": "keybase.io",
+      "kid": "012080a824c78a8b34d499621c3fb9a66cf807ef3994540ee6b135db9c8a86a6916f0a",
+      "uid": "a7d8dc968b66dba41a0dea9189ce7619",
+      "username": "themrcesi"
+    },
+    "merkle_root": {
+      "ctime": 1598906566,
+      "hash": "10878bff1c06f8c8d99f1b06595b6e096822c5f7693d12645e49826bff72a4d5aa1e94c101a8558b1795c8c9d50d38814ad67aea411e2a9c74b05b1ae0c360a3",
+      "hash_meta": "2223f5cb4a9a58fb78ea9d7c221b107d6a2845e03d12de39578ef0a6a8251dc2",
+      "seqno": 17436956
+    },
+    "service": {
+      "entropy": "6EJ6jqsqgtd04lSMGh0ubTCV",
+      "hostname": "themrcesi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1598906630,
+  "expire_in": 504576000,
+  "prev": "4bb6441ee8f559f84351c17a2ed5338211471d8ec6bd5939d8c4659d4de005d1",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggKgkx4qLNNSZYhw/uaZs+AfvOZRUDuaxNducioamkW8Kp3BheWxvYWTESpcCGMQgS7ZEHuj1WfhDUcF6LtUzghFHHY7GvVk52MRlnU3gBdHEILYhrbD3irR9RA6oZoPAkZZDNPOecZc9tYYnYlhsWl9JAgHCo3NpZ8RAgXDdhMfcIrupKL96jeqgzdiATZXyWc8LfUjRZwsf/+A0uXKwk0gapWRF6Rf4XKu+gPIFJjVNKuxEoLIH7sw2BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHm5W+Hk2iWKSr3pr+PHxXRS8BCvnF3B1mZYL6LftWCao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/themrcesi
+
+====================================================================================================================================
+https://keybase.io/themrcesi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://themrcesi.github.io
+  * I am themrcesi (https://keybase.io/themrcesi) on keybase.
+  * I have a public key ASCAqCTHios01JliHD-5pmz4B-85lFQO5rE125yKhqaRbwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010182a7d416b3c8150c7930f2bd3a0b3916d839d69acd82ca38e0a372cfb65313db0a",
+      "host": "keybase.io",
+      "kid": "012080a824c78a8b34d499621c3fb9a66cf807ef3994540ee6b135db9c8a86a6916f0a",
+      "uid": "a7d8dc968b66dba41a0dea9189ce7619",
+      "username": "themrcesi"
+    },
+    "merkle_root": {
+      "ctime": 1598906566,
+      "hash": "10878bff1c06f8c8d99f1b06595b6e096822c5f7693d12645e49826bff72a4d5aa1e94c101a8558b1795c8c9d50d38814ad67aea411e2a9c74b05b1ae0c360a3",
+      "hash_meta": "2223f5cb4a9a58fb78ea9d7c221b107d6a2845e03d12de39578ef0a6a8251dc2",
+      "seqno": 17436956
+    },
+    "service": {
+      "entropy": "6EJ6jqsqgtd04lSMGh0ubTCV",
+      "hostname": "themrcesi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1598906630,
+  "expire_in": 504576000,
+  "prev": "4bb6441ee8f559f84351c17a2ed5338211471d8ec6bd5939d8c4659d4de005d1",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggKgkx4qLNNSZYhw/uaZs+AfvOZRUDuaxNducioamkW8Kp3BheWxvYWTESpcCGMQgS7ZEHuj1WfhDUcF6LtUzghFHHY7GvVk52MRlnU3gBdHEILYhrbD3irR9RA6oZoPAkZZDNPOecZc9tYYnYlhsWl9JAgHCo3NpZ8RAgXDdhMfcIrupKL96jeqgzdiATZXyWc8LfUjRZwsf/+A0uXKwk0gapWRF6Rf4XKu+gPIFJjVNKuxEoLIH7sw2BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHm5W+Hk2iWKSr3pr+PHxXRS8BCvnF3B1mZYL6LftWCao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/themrcesi
+
+====================================================================================================================================
+https://keybase.io/themrcesi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://themrcesi.github.io
+  * I am themrcesi (https://keybase.io/themrcesi) on keybase.
+  * I have a public key ASCAqCTHios01JliHD-5pmz4B-85lFQO5rE125yKhqaRbwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010182a7d416b3c8150c7930f2bd3a0b3916d839d69acd82ca38e0a372cfb65313db0a",
+      "host": "keybase.io",
+      "kid": "012080a824c78a8b34d499621c3fb9a66cf807ef3994540ee6b135db9c8a86a6916f0a",
+      "uid": "a7d8dc968b66dba41a0dea9189ce7619",
+      "username": "themrcesi"
+    },
+    "merkle_root": {
+      "ctime": 1598906566,
+      "hash": "10878bff1c06f8c8d99f1b06595b6e096822c5f7693d12645e49826bff72a4d5aa1e94c101a8558b1795c8c9d50d38814ad67aea411e2a9c74b05b1ae0c360a3",
+      "hash_meta": "2223f5cb4a9a58fb78ea9d7c221b107d6a2845e03d12de39578ef0a6a8251dc2",
+      "seqno": 17436956
+    },
+    "service": {
+      "entropy": "6EJ6jqsqgtd04lSMGh0ubTCV",
+      "hostname": "themrcesi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1598906630,
+  "expire_in": 504576000,
+  "prev": "4bb6441ee8f559f84351c17a2ed5338211471d8ec6bd5939d8c4659d4de005d1",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggKgkx4qLNNSZYhw/uaZs+AfvOZRUDuaxNducioamkW8Kp3BheWxvYWTESpcCGMQgS7ZEHuj1WfhDUcF6LtUzghFHHY7GvVk52MRlnU3gBdHEILYhrbD3irR9RA6oZoPAkZZDNPOecZc9tYYnYlhsWl9JAgHCo3NpZ8RAgXDdhMfcIrupKL96jeqgzdiATZXyWc8LfUjRZwsf/+A0uXKwk0gapWRF6Rf4XKu+gPIFJjVNKuxEoLIH7sw2BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHm5W+Hk2iWKSr3pr+PHxXRS8BCvnF3B1mZYL6LftWCao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/themrcesi
+
+====================================================================================================================================
+https://keybase.io/themrcesi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://themrcesi.github.io
+  * I am themrcesi (https://keybase.io/themrcesi) on keybase.
+  * I have a public key ASCAqCTHios01JliHD-5pmz4B-85lFQO5rE125yKhqaRbwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010182a7d416b3c8150c7930f2bd3a0b3916d839d69acd82ca38e0a372cfb65313db0a",
+      "host": "keybase.io",
+      "kid": "012080a824c78a8b34d499621c3fb9a66cf807ef3994540ee6b135db9c8a86a6916f0a",
+      "uid": "a7d8dc968b66dba41a0dea9189ce7619",
+      "username": "themrcesi"
+    },
+    "merkle_root": {
+      "ctime": 1598906566,
+      "hash": "10878bff1c06f8c8d99f1b06595b6e096822c5f7693d12645e49826bff72a4d5aa1e94c101a8558b1795c8c9d50d38814ad67aea411e2a9c74b05b1ae0c360a3",
+      "hash_meta": "2223f5cb4a9a58fb78ea9d7c221b107d6a2845e03d12de39578ef0a6a8251dc2",
+      "seqno": 17436956
+    },
+    "service": {
+      "entropy": "6EJ6jqsqgtd04lSMGh0ubTCV",
+      "hostname": "themrcesi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1598906630,
+  "expire_in": 504576000,
+  "prev": "4bb6441ee8f559f84351c17a2ed5338211471d8ec6bd5939d8c4659d4de005d1",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggKgkx4qLNNSZYhw/uaZs+AfvOZRUDuaxNducioamkW8Kp3BheWxvYWTESpcCGMQgS7ZEHuj1WfhDUcF6LtUzghFHHY7GvVk52MRlnU3gBdHEILYhrbD3irR9RA6oZoPAkZZDNPOecZc9tYYnYlhsWl9JAgHCo3NpZ8RAgXDdhMfcIrupKL96jeqgzdiATZXyWc8LfUjRZwsf/+A0uXKwk0gapWRF6Rf4XKu+gPIFJjVNKuxEoLIH7sw2BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHm5W+Hk2iWKSr3pr+PHxXRS8BCvnF3B1mZYL6LftWCao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/themrcesi
+
+====================================================================================================================================
+https://keybase.io/themrcesi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://themrcesi.github.io
+  * I am themrcesi (https://keybase.io/themrcesi) on keybase.
+  * I have a public key ASCAqCTHios01JliHD-5pmz4B-85lFQO5rE125yKhqaRbwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010182a7d416b3c8150c7930f2bd3a0b3916d839d69acd82ca38e0a372cfb65313db0a",
+      "host": "keybase.io",
+      "kid": "012080a824c78a8b34d499621c3fb9a66cf807ef3994540ee6b135db9c8a86a6916f0a",
+      "uid": "a7d8dc968b66dba41a0dea9189ce7619",
+      "username": "themrcesi"
+    },
+    "merkle_root": {
+      "ctime": 1598906566,
+      "hash": "10878bff1c06f8c8d99f1b06595b6e096822c5f7693d12645e49826bff72a4d5aa1e94c101a8558b1795c8c9d50d38814ad67aea411e2a9c74b05b1ae0c360a3",
+      "hash_meta": "2223f5cb4a9a58fb78ea9d7c221b107d6a2845e03d12de39578ef0a6a8251dc2",
+      "seqno": 17436956
+    },
+    "service": {
+      "entropy": "6EJ6jqsqgtd04lSMGh0ubTCV",
+      "hostname": "themrcesi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1598906630,
+  "expire_in": 504576000,
+  "prev": "4bb6441ee8f559f84351c17a2ed5338211471d8ec6bd5939d8c4659d4de005d1",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggKgkx4qLNNSZYhw/uaZs+AfvOZRUDuaxNducioamkW8Kp3BheWxvYWTESpcCGMQgS7ZEHuj1WfhDUcF6LtUzghFHHY7GvVk52MRlnU3gBdHEILYhrbD3irR9RA6oZoPAkZZDNPOecZc9tYYnYlhsWl9JAgHCo3NpZ8RAgXDdhMfcIrupKL96jeqgzdiATZXyWc8LfUjRZwsf/+A0uXKwk0gapWRF6Rf4XKu+gPIFJjVNKuxEoLIH7sw2BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHm5W+Hk2iWKSr3pr+PHxXRS8BCvnF3B1mZYL6LftWCao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/themrcesi
+
+==================================================================v
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010182a7d416b3c8150c7930f2bd3a0b3916d839d69acd82ca38e0a372cfb65313db0a",
+      "host": "keybase.io",
+      "kid": "012080a824c78a8b34d499621c3fb9a66cf807ef3994540ee6b135db9c8a86a6916f0a",
+      "uid": "a7d8dc968b66dba41a0dea9189ce7619",
+      "username": "themrcesi"
+    },
+    "merkle_root": {
+      "ctime": 1598906566,
+      "hash": "10878bff1c06f8c8d99f1b06595b6e096822c5f7693d12645e49826bff72a4d5aa1e94c101a8558b1795c8c9d50d38814ad67aea411e2a9c74b05b1ae0c360a3",
+      "hash_meta": "2223f5cb4a9a58fb78ea9d7c221b107d6a2845e03d12de39578ef0a6a8251dc2",
+      "seqno": 17436956
+    },
+    "service": {
+      "entropy": "6EJ6jqsqgtd04lSMGh0ubTCV",
+      "hostname": "themrcesi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1598906630,
+  "expire_in": 504576000,
+  "prev": "4bb6441ee8f559f84351c17a2ed5338211471d8ec6bd5939d8c4659d4de005d1",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggKgkx4qLNNSZYhw/uaZs+AfvOZRUDuaxNducioamkW8Kp3BheWxvYWTESpcCGMQgS7ZEHuj1WfhDUcF6LtUzghFHHY7GvVk52MRlnU3gBdHEILYhrbD3irR9RA6oZoPAkZZDNPOecZc9tYYnYlhsWl9JAgHCo3NpZ8RAgXDdhMfcIrupKL96jeqgzdiATZXyWc8LfUjRZwsf/+A0uXKwk0gapWRF6Rf4XKu+gPIFJjVNKuxEoLIH7sw2BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHm5W+Hk2iWKSr3pr+PHxXRS8BCvnF3B1mZYL6LftWCao3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/themrcesi
+
+==================================================================
