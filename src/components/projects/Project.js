@@ -17,7 +17,7 @@ export function Project(props) {
                 </div>
                 <Card.Body className="work-content">
                     <Card.Title className="w-title">{title}</Card.Title>
-                    <Card.Subtitle className="w-category">{categories.map((categorie) => categorie + " ")}</Card.Subtitle>
+                    <Card.Subtitle className="w-category">{categories.map((categorie) => "-" + categorie + "-")}</Card.Subtitle>
                     <Card.Text>
                         {text}
                     </Card.Text>

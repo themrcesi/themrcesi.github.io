@@ -59,6 +59,59 @@ export function Portfolio() {
       pictures: [],
       github: "https://github.com/themrcesi/UNIMODE",
     },
+    {
+      title: "Machine Learning Ranking",
+      categories: [
+        "Python",
+        "Machine Learning",
+        "Information Retrieval",
+        "LOINC",
+        "Learning to Rank"
+      ],
+      text: "Ranker for the LOINC medical terminology applying machine learning techniques.",
+      mainPicture: process.env.PUBLIC_URL + "/img/mlranking.png",
+      pictures: [],
+      github: "https://github.com/themrcesi/Biomedical-Informatics/tree/main/Machine%20Learning%20Ranking",
+    },
+    {
+      title: "Information Retrieval Engine",
+      categories: [
+        "Python",
+        "Information Retrieval",
+        "Word2Vec",
+        "Latent Semantic Indexing",
+        "Vector Space Model",
+        "TFIDF",
+        "Fast Text",
+        "TREC"
+      ],
+      text: "Information Retrieval Engine for the CORD-19 corpus.",
+      mainPicture: process.env.PUBLIC_URL + "/img/ire.png",
+      pictures: [],
+      github: "https://github.com/themrcesi/Biomedical-Informatics/tree/main/Information%20Retrieval%20Engine",
+    },
+    {
+      title: "Computer Vision Exercises",
+      categories: [
+        "Open CV",
+        "Python",
+        "Epipolar Geometry",
+        "Camera Calibration",
+        "Stereo Vision",
+        "Image Classification",
+        "CNN",
+      ],
+      text: "Computer vision exercises: from classic techniques to deap learning approaches.",
+      mainPicture: process.env.PUBLIC_URL + "/img/cv.png",
+      pictures: [
+        process.env.PUBLIC_URL + "/img/cv_1.png",
+        process.env.PUBLIC_URL + "/img/cv_1_1.png",
+        process.env.PUBLIC_URL + "/img/cv_2.png",
+        process.env.PUBLIC_URL + "/img/cv_2_1.png",
+        process.env.PUBLIC_URL + "/img/cv_3.png",
+      ],
+      github: "https://github.com/themrcesi/ComputerVision",
+    },
   ];
 
   const courses = [
