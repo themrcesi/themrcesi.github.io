@@ -86,9 +86,46 @@ export function Portfolio() {
         "TREC"
       ],
       text: "Information Retrieval Engine for the CORD-19 corpus.",
-      mainPicture: process.env.PUBLIC_URL + "/img/ire.png",
+      mainPicture: process.env.PUBLIC_URL + "/img/ire.PNG",
       pictures: [],
       github: "https://github.com/themrcesi/Biomedical-Informatics/tree/main/Information%20Retrieval%20Engine",
+    },
+    {
+      title: "Document Classifier",
+      categories: [
+        "Tf-idf",
+        "Gensim",
+        "Glossary",
+        "Word2Vec",
+        "Naive Bayes",
+        "NLP",
+        "Text Classification",
+      ],
+      text: "Document Classifier with Glossary implemented in Python.",
+      mainPicture: process.env.PUBLIC_URL + "/img/doc_class.png",
+      pictures: [
+        process.env.PUBLIC_URL + "/img/doc_class_cbow.png",
+        process.env.PUBLIC_URL + "/img/doc_class_sim.png",
+        process.env.PUBLIC_URL + "/img/doc_class_reor.png",
+      ],
+      github: "https://github.com/themrcesi/Linguistic-Engineering/tree/main/Documents-Classifier",
+    },
+    {
+      title: "Question-Answer System",
+      categories: [
+        "Question-Answering",
+        "NLP",
+        "Python",
+        "Information Extraction"
+      ],
+      text: "Question-Answer System implemented in Python.",
+      mainPicture: process.env.PUBLIC_URL + "/img/qa.png",
+      pictures: [
+        process.env.PUBLIC_URL + "/img/qa_app.png",
+        process.env.PUBLIC_URL + "/img/qa_quest.png",
+
+      ],
+      github: "https://github.com/themrcesi/Linguistic-Engineering/tree/main/QA-System",
     },
     {
       title: "Computer Vision Exercises",
@@ -102,15 +139,32 @@ export function Portfolio() {
         "CNN",
       ],
       text: "Computer vision exercises: from classic techniques to deap learning approaches.",
-      mainPicture: process.env.PUBLIC_URL + "/img/cv.png",
+      mainPicture: process.env.PUBLIC_URL + "/img/cv.PNG",
       pictures: [
-        process.env.PUBLIC_URL + "/img/cv_1.png",
-        process.env.PUBLIC_URL + "/img/cv_1_1.png",
-        process.env.PUBLIC_URL + "/img/cv_2.png",
-        process.env.PUBLIC_URL + "/img/cv_2_1.png",
-        process.env.PUBLIC_URL + "/img/cv_3.png",
+        process.env.PUBLIC_URL + "/img/cv_1.PNG",
+        process.env.PUBLIC_URL + "/img/cv_1_1.PNG",
+        process.env.PUBLIC_URL + "/img/cv_2.PNG",
+        process.env.PUBLIC_URL + "/img/cv_2_1.PNG",
+        process.env.PUBLIC_URL + "/img/cv_3.PNG",
       ],
       github: "https://github.com/themrcesi/ComputerVision",
+    },
+    {
+      title: "Autonomous Robots",
+      categories: [
+        "Path planning",
+        "Value Iteration",
+        "Dijkstra",
+        "A*",
+        "Depth First Search"
+      ],
+      text: "Path planning algorithms implementation.",
+      mainPicture: process.env.PUBLIC_URL + "/img/robots.jpg",
+      pictures: [
+        process.env.PUBLIC_URL + "/img/robots_app.PNG",
+        process.env.PUBLIC_URL + "/img/robots_output.png",
+      ],
+      github: "https://github.com/themrcesi/Autonomous-Robots",
     },
   ];
 

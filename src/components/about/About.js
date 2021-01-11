@@ -6,12 +6,12 @@ class About extends React.Component {
     super();
     this.state = {
       skills: [
-        { id: "Java_skill", content: "Java", value: "75" },
-        { id: "Python_skill", content: "Python", value: "65" },
-        { id: "C#_skill", content: "C#", value: "65" },
-        { id: "React_skill", content: "ReactJS", value: "70" },
-        { id: "LaTeX_skill", content: "LaTeX", value: "80" },
-        { id: "analytical", content: "Analytical skills", value: "85" },
+        { id: "Java_skill", content: "Machine Learning", value: "65" },
+        { id: "Python_skill", content: "Python", value: "90" },
+        { id: "C#_skill", content: "Deep Learning", value: "65" },
+        { id: "React_skill", content: "NLP", value: "55" },
+        { id: "LaTeX_skill", content: "Software Design & Development", value: "80" },
+        { id: "analytical", content: "Information Retrieval", value: "85" },
         { id: "solving_skill", content: "Problem solving", value: "80" },
         { id: "Teamwork_skill", content: "Team work", value: "85" },
         { id: "Leadership_skill", content: "Leadership", value: "95" },
@@ -35,7 +35,7 @@ class About extends React.Component {
         {
           id: "fourth-p-about",
           content:
-            "I´m currently studying an Artificial Inteligence MSc at Universidad Politécnica de Madrid.",
+            "I´m currently studying a M.Sc. in Artificial Inteligence at Universidad Politécnica de Madrid.",
         },
       ],
     };
