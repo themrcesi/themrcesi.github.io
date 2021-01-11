@@ -104,9 +104,9 @@ export function Portfolio() {
       text: "Document Classifier with Glossary implemented in Python.",
       mainPicture: process.env.PUBLIC_URL + "/img/doc_class.png",
       pictures: [
-        process.env.PUBLIC_URL + "/img/doc_class_cbow.png",
-        process.env.PUBLIC_URL + "/img/doc_class_sim.png",
-        process.env.PUBLIC_URL + "/img/doc_class_reor.png",
+        process.env.PUBLIC_URL + "/img/doc_class_cbow.PNG",
+        process.env.PUBLIC_URL + "/img/doc_class_sim.PNG",
+        process.env.PUBLIC_URL + "/img/doc_class_reor.PNG",
       ],
       github: "https://github.com/themrcesi/Linguistic-Engineering/tree/main/Documents-Classifier",
     },
