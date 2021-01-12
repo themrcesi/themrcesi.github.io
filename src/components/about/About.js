@@ -28,11 +28,6 @@ class About extends React.Component {
             "Sports and music have always been an essential part of my life.",
         },
         {
-          id: "third-p-about",
-          content:
-            "Always ready to learn new things. If I have a goal, I don't stop until I get it.",
-        },
-        {
           id: "fourth-p-about",
           content:
             "I´m currently studying a M.Sc. in Artificial Inteligence at Universidad Politécnica de Madrid.",
