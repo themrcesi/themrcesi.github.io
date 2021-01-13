@@ -11,7 +11,7 @@ class About extends React.Component {
         { id: "C#_skill", content: "Deep Learning", value: "65" },
         { id: "React_skill", content: "NLP", value: "55" },
         { id: "LaTeX_skill", content: "Software Design & Development", value: "80" },
-        { id: "analytical", content: "Information Retrieval", value: "85" },
+        { id: "analytical", content: "Information Retrieval", value: "60" },
         { id: "solving_skill", content: "Problem solving", value: "80" },
         { id: "Teamwork_skill", content: "Team work", value: "85" },
         { id: "Leadership_skill", content: "Leadership", value: "95" },
