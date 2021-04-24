@@ -179,6 +179,16 @@ export function Portfolio() {
         "https://www.udemy.com/course/data-science-and-machine-learning-with-python-hands-on/",
       certificate: process.env.PUBLIC_URL + "/files/udemy_1.pdf",
     },
+    {
+      title: "Deep Learning Specialization",
+      subtitle: "Coursera - Deeplearning.ai",
+      text: "Deep Learning is transforming multiple industries. This five-course specialization will help you understand Deep Learning fundamentals, apply them, and build a career in AI.",
+      mainPicture:
+      process.env.PUBLIC_URL + "/img/dl.png",
+      link:
+        "https://www.coursera.org/specializations/deep-learning",
+      certificate: "https://www.coursera.org/account/accomplishments/specialization/MMUG7U7XD3Q6",
+    },
   ];
 
   return (

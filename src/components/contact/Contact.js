@@ -80,7 +80,6 @@ export function Contact(props) {
                                             <ul>
                                                 <li><a href="https://github.com/themrcesi" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><GitHub></GitHub></span></a></li>
                                                 <li><a href="https://www.linkedin.com/in/césar-garcía-cabeza/" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><LinkedIn></LinkedIn></span></a></li>
-                                                <li><a href="https://www.instagram.com/cgcjc/" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><Instagram></Instagram></span></a></li>
                                             </ul>
                                         </div>
                                     </div>

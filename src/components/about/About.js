@@ -6,14 +6,14 @@ class About extends React.Component {
     super();
     this.state = {
       skills: [
-        { id: "Java_skill", content: "Machine Learning", value: "65" },
-        { id: "Python_skill", content: "Python", value: "90" },
-        { id: "C#_skill", content: "Deep Learning", value: "65" },
+        { id: "Java_skill", content: "Machine Learning", value: "50" },
+        { id: "Python_skill", content: "Python", value: "85" },
+        { id: "C#_skill", content: "Deep Learning", value: "50" },
         { id: "React_skill", content: "NLP", value: "55" },
         { id: "LaTeX_skill", content: "Software Design & Development", value: "80" },
-        { id: "analytical", content: "Information Retrieval", value: "60" },
+        { id: "analytical", content: "Information Retrieval", value: "50" },
         { id: "solving_skill", content: "Problem solving", value: "80" },
-        { id: "Teamwork_skill", content: "Team work", value: "85" },
+        { id: "Teamwork_skill", content: "Team work", value: "90" },
         { id: "Leadership_skill", content: "Leadership", value: "95" },
       ],
       about_me: [
@@ -73,7 +73,7 @@ class About extends React.Component {
                           </p>
                           <p>
                             <span className="title-s">Email: </span>{" "}
-                            <span>cesareogarcia@hotmail.es</span>
+                            <span>cesar.gar.cabeza@gmail.com</span>
                           </p>
                           <p>
                             <span className="title-s">Phone: </span>{" "}
