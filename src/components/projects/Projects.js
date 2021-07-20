@@ -18,6 +18,33 @@ import viade_modal from process.env.PUBLIC_URL + "/img/viade_modal.png"; */
 export function Portfolio() {
   const projects = [
     {
+      title: "Bachelor´s Thesis",
+      categories: [
+        "C#",
+        "Simulated Annealing",
+        "Linear programming",
+        "Optimization",
+        "Latex",
+      ],
+      text: "Development of aggregation methods of partially ordered sets.",
+      mainPicture: process.env.PUBLIC_URL + "/img/posets.png",
+      pictures: [],
+      github: "https://github.com/themrcesi/UNIMODE",
+    },
+    {
+      title: "Master´s Thesis",
+      categories: [
+        "Information Retrieval", 
+        "Multilinguality",
+        "Python",
+        "Artificial Intelligence"
+      ],
+      text: "Use of Interlinguas for Cross-Language Information Retrieval",
+      mainPicture: process.env.PUBLIC_URL + "/img/tfm.jpg",
+      pictures: [],
+      github: "https://github.com/themrcesi/tfm",
+    },
+    {
       title: "ViaDe",
       categories: ["React", "Solid", "Redux", "Leaflet", "Docker", "CI"],
       text:
@@ -44,20 +71,6 @@ export function Portfolio() {
       mainPicture: process.env.PUBLIC_URL + "/img/c--.png",
       pictures: [],
       github: "https://github.com/themrcesi/C--Compiler",
-    },
-    {
-      title: "Final Degree Project",
-      categories: [
-        "C#",
-        "Simulated Annealing",
-        "Linear programming",
-        "Optimization",
-        "Latex",
-      ],
-      text: "Development of aggregation methods of partially ordered sets.",
-      mainPicture: process.env.PUBLIC_URL + "/img/posets.png",
-      pictures: [],
-      github: "https://github.com/themrcesi/UNIMODE",
     },
     {
       title: "Machine Learning Ranking",
@@ -174,7 +187,7 @@ export function Portfolio() {
       subtitle: "Sundog Education by Frank Kane",
       text: "Complete hands-on machine learning tutorial with data science, Tensorflow, artificial intelligence, and neural networks.",
       mainPicture:
-        "https://img-a.udemycdn.com/course/240x135/671576_a272_4.jpg",
+        "https://static.skillshare.com/uploads/video/thumbnails/3bb278df88564638b454c7513ece3e78/original",
       link:
         "https://www.udemy.com/course/data-science-and-machine-learning-with-python-hands-on/",
       certificate: process.env.PUBLIC_URL + "/files/udemy_1.pdf",

@@ -20,17 +20,12 @@ class About extends React.Component {
         {
           id: "first-p-about",
           content:
-            "Software Engineer who loves everything related to technology. I am passionate about Artificial Intelligence and particularly all its real-life applications.",
+            "Software Engineer with a Master´s Degree in Artificial Intelligence who loves everything related to technology. I am passionate about Data and Artificial Intelligence and particularly all its real-life applications.",
         },
         {
           id: "second-p-about",
           content:
-            "Sports and music have always been an essential part of my life.",
-        },
-        {
-          id: "fourth-p-about",
-          content:
-            "I´m currently studying a M.Sc. in Artificial Inteligence at Universidad Politécnica de Madrid.",
+            "Sports and music have always been an essential part of my life, specially Judo!",
         },
       ],
     };
@@ -69,7 +64,7 @@ class About extends React.Component {
                           </p>
                           <p>
                             <span className="title-s">Profile: </span>{" "}
-                            <span>Software Engineer</span>
+                            <span>Software Engineer (AI)</span>
                           </p>
                           <p>
                             <span className="title-s">Email: </span>{" "}
