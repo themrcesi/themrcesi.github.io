@@ -6,6 +6,7 @@ import {MyNavBar} from './components/navBar/MyNavBar';
 import {Intro} from './components/intro/Intro';
 import About from './components/about/About';
 import Projects from './components/projects/Projects';
+import Timeline from './components/experienceEducation/timeline';
 /* import Contact from './components/contact/Contact';
 import BackToTop from './components/backToTop/BackToTop';
 import Preloader from './components/preloader/Preloader'; */
@@ -19,6 +20,7 @@ ReactDOM.render(
     <MyNavBar></MyNavBar>
     <Intro></Intro>
     <About></About>
+    <Timeline></Timeline>
     <Projects></Projects>
     <Contact></Contact>
     <BackToTop></BackToTop>

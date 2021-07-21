@@ -10,7 +10,11 @@ class About extends React.Component {
         { id: "Python_skill", content: "Python", value: "85" },
         { id: "C#_skill", content: "Deep Learning", value: "50" },
         { id: "React_skill", content: "NLP", value: "55" },
-        { id: "LaTeX_skill", content: "Software Design & Development", value: "80" },
+        {
+          id: "LaTeX_skill",
+          content: "Software Design & Development",
+          value: "80",
+        },
         { id: "analytical", content: "Information Retrieval", value: "50" },
         { id: "solving_skill", content: "Problem solving", value: "80" },
         { id: "Teamwork_skill", content: "Team work", value: "90" },
