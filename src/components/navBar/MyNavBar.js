@@ -12,6 +12,7 @@ export class MyNavBar extends Component {
     this.links = [
       { name: "HOME", ref: "home" },
       { name: "ABOUT", ref: "about" },
+      { name: "EXPERIENCE", ref: "timeline" },
       { name: "PORTFOLIO", ref: "projects" },
       { name: "CONTACT", ref: "contact" },
       { name: "RESUME", ref: "/files/cv.pdf" },
