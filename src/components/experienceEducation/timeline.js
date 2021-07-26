@@ -76,6 +76,9 @@ export default function Timeline() {
             <h3 className="vertical-timeline-element-title">
               Software Engineer @DAIL Software
             </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Internship
+            </h4>
             <p><span>Development of ChatBots (Python + Rasa) | Information Retrieval Engine | Docker</span></p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -87,6 +90,9 @@ export default function Timeline() {
             <h3 className="vertical-timeline-element-title">
               Software Engineer @StockFink
             </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Collaboration
+            </h4>
             <p><span>Tasks automation using Python</span></p>
           </VerticalTimelineElement>
         </VerticalTimeline>

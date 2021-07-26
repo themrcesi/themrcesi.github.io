@@ -184,7 +184,7 @@ export function Portfolio() {
   const courses = [
     {
       title: "Machine Learning, Data Science and Deep Learning with Python",
-      subtitle: "Sundog Education by Frank Kane",
+      subtitle: "Udemy",
       text: "Complete hands-on machine learning tutorial with data science, Tensorflow, artificial intelligence, and neural networks.",
       mainPicture:
         "https://static.skillshare.com/uploads/video/thumbnails/3bb278df88564638b454c7513ece3e78/original",
@@ -201,6 +201,16 @@ export function Portfolio() {
       link:
         "https://www.coursera.org/specializations/deep-learning",
       certificate: "https://www.coursera.org/account/accomplishments/specialization/MMUG7U7XD3Q6",
+    },
+    {
+      title: "Python for Data Science and Machine Learning Bootcamp",
+      subtitle: "Udemy",
+      text: "Learn how to use NumPy, Pandas, Seaborn , Matplotlib , Plotly , Scikit-Learn , Machine Learning, Tensorflow , and more!",
+      mainPicture:
+      "https://freedownloadcourse.com/wp-content/uploads/2021/03/download-python-for-data-science-and-machine-learning-bootcamp.jpg",
+      link:
+      "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/",
+      certificate: "https://ude.my/UC-c2f1a0a1-5c04-4a15-baab-60d4ba2d5cb6",
     },
   ];
 

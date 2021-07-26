@@ -79,7 +79,7 @@ export function Contact(props) {
                                         <div className="socials">
                                             <ul>
                                                 <li><a href="https://github.com/themrcesi" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><GitHub></GitHub></span></a></li>
-                                                <li><a href="https://www.linkedin.com/in/césar-garcía-cabeza/" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><LinkedIn></LinkedIn></span></a></li>
+                                                <li><a href="https://www.linkedin.com/in/cesargarciacabeza/" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><LinkedIn></LinkedIn></span></a></li>
                                             </ul>
                                         </div>
                                     </div>
