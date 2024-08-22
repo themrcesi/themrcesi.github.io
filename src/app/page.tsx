@@ -1,25 +1,26 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from 'react'
-import { Shuffle, CalendarCog, Signpost, SlidersHorizontal, Settings, Star, MonitorCog, ChartNoAxesCombined, ChevronDownIcon, LinkedinIcon, GithubIcon, SendIcon, CloudIcon, DatabaseIcon, ServerIcon, BoxIcon, PlayIcon, TerminalIcon, DownloadIcon, GraduationCapIcon, ExternalLinkIcon, UserIcon, UsersIcon, BrainIcon, LightbulbIcon } from 'lucide-react'
+import React, { useState, useEffect, useRef, useCallback } from "react"
+import { Shuffle, CalendarCog, Signpost, SlidersHorizontal, Settings, Star, MonitorCog, ChartNoAxesCombined, ChevronDownIcon, LinkedinIcon, GithubIcon, SendIcon, CloudIcon, DatabaseIcon, ServerIcon, BoxIcon, PlayIcon, TerminalIcon, DownloadIcon, GraduationCapIcon, ExternalLinkIcon, UserIcon, UsersIcon, BrainIcon, LightbulbIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
-import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
+import Link from "next/link"
+import ReactMarkdown from "react-markdown"
 import { ReactTyped } from "react-typed";
-import toast, { Toaster } from 'react-hot-toast'
+import toast, { Toaster } from "react-hot-toast"
+import Head from "next/head";
 
 
 export default function Home() {
   const [currentTitle, setCurrentTitle] = useState(0)
   const titles = ["Data Scientist", "MSc Cloud Data Engineering and Data Science",  "MSc Artificial Intelligence"]
-  const aboutRef = useRef(null)
+  const aboutRef = useRef<HTMLDivElement>(null)
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: ""
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -30,31 +31,32 @@ export default function Home() {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData)
-    await fetch(e.target.action, {
-      method: 'POST',
+    console.log("Form submitted:", formData)
+    const form = e.target as HTMLFormElement;
+    await fetch(form.action, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
     // Clear the form fields
     setFormData({
-      name: '',
-      email: '',
-      message: ''
+      name: "",
+      email: "",
+      message: ""
     })
-    toast.success('Message sent successfully!', {
+    toast.success("Message sent successfully!", {
       style: {
-        background: '#333',
-        color: '#fff',
+        background: "#333",
+        color: "#fff",
       },
       iconTheme: {
-        primary: '#22c55e',
-        secondary: '#fff',
+        primary: "#22c55e",
+        secondary: "#fff",
       },
     })
   }
@@ -67,10 +69,16 @@ export default function Home() {
   }, [])
 
   const scrollToAbout = () => {
-    aboutRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" })
+    }
   }
-
-  const skills = [
+  interface Skill {
+    name: string;
+    level: 'Basic' | 'Intermediate' | 'Advanced';
+    icon: JSX.Element;
+  }
+  const skills: Skill[] = [
     { name: "Python", icon: <TerminalIcon className="h-6 w-6" />, level: "Advanced" },
     { name: "Cloud (AWS & GCP)", icon: <CloudIcon className="h-6 w-6" />, level: "Intermediate" },
     { name: "ETL orchestration (Airflow & Prefect)", icon: <DatabaseIcon className="h-6 w-6" />, level: "Advanced" },
@@ -109,7 +117,7 @@ export default function Home() {
       website: "https://www.dail.es/", 
       startDate: "Apr 2021", 
       endDate: "Jun 2021", 
-      description: "During my master's degree, I completed an internship at Dail Software while preparing my master's thesis. This role provided me with hands-on experience in Natural Language Processing (NLP) techniques and the development of chatbots and recommender systems for various clients.\n\n- Applied NLP techniques to real-world projects\n\n- Developed chatbots and recommender systems tailored to client needs\n\n- Gained proficiency in Python, Rasa, Gensim, and NLTK\n\nTech stack: Python, Rasa, Gensim, NLTK, Docker" 
+      description: "During my master&apos;s degree, I completed an internship at Dail Software while preparing my master&apos;s thesis. This role provided me with hands-on experience in Natural Language Processing (NLP) techniques and the development of chatbots and recommender systems for various clients.\n\n- Applied NLP techniques to real-world projects\n\n- Developed chatbots and recommender systems tailored to client needs\n\n- Gained proficiency in Python, Rasa, Gensim, and NLTK\n\nTech stack: Python, Rasa, Gensim, NLTK, Docker" 
     },
     { 
       position: "Research Intern", 
@@ -117,7 +125,7 @@ export default function Home() {
       website: "http://gib.fi.upm.es/", 
       startDate: "Sep 2020", 
       endDate: "Sep 2020 2020", 
-      description: "I conducted an internship during the first month of my master's degree within the Biomedical Research Group. This experience provided valuable insights into medical data integration and helped shape my career interests.\n\n-  Learned about medical data integration tools using terminologies such as LOINC, ICD-10, and SNOMED\n\n- Gained exposure to the complexities of biomedical data\n\n- Realized a stronger interest in natural language processing, leading to a career shift\n\nTech stack: Python, Tableau" 
+      description: "I conducted an internship during the first month of my master&apos;s degree within the Biomedical Research Group. This experience provided valuable insights into medical data integration and helped shape my career interests.\n\n-  Learned about medical data integration tools using terminologies such as LOINC, ICD-10, and SNOMED\n\n- Gained exposure to the complexities of biomedical data\n\n- Realized a stronger interest in natural language processing, leading to a career shift\n\nTech stack: Python, Tableau" 
     },
     { 
       position: "Undergraduate Research Intern", 
@@ -137,13 +145,13 @@ export default function Home() {
 
   const projects = [
     { name: "Wallapop Data Extraction & Data Visualization Pipeline", description: "Developed a scalable, serverless data pipeline and visualization app using AWS, Prefect, and Streamlit to extract and analyze data from the Wallapop API. Automated infrastructure deployment with Terraform and integrated CI/CD pipelines with GitHub Actions for efficient updates and management.", url: "https://github.com/themrcesi/cidaen2324-tfm", image: "https://cgarcia-cidaen-tfm.streamlit.app/~/+/media/bd13b116079830b838ea69408041b1d28e3d8d0fa477392ebf2fb174.png"},
-    { name: "Assessing ChatGPT's Performance in the Spanish MIR Exam Using Python Automation", description: "This project evaluates ChatGPT's ability to pass the Spanish MIR exam by automating exam reading with Python and integrating the OpenAI API with Streamlit. The goal is to compare its performance with that of human candidates and explore the potential of AI in medical education.", url: "https://chatgpt-mir.streamlit.app/", image: "/chatgpt-mir.png"},
+    { name: "Assessing ChatGPT&apos;s Performance in the Spanish MIR Exam Using Python Automation", description: "This project evaluates ChatGPT's ability to pass the Spanish MIR exam by automating exam reading with Python and integrating the OpenAI API with Streamlit. The goal is to compare its performance with that of human candidates and explore the potential of AI in medical education.", url: "https://chatgpt-mir.streamlit.app/", image: "/chatgpt-mir.png"},
     { name: "Multilingual Document Retrieval Using Universal Networking Language as an Interlingua", description: "This project analyzes existing methods for addressing multilinguality in document retrieval systems, proposing a novel model that leverages the Universal Networking Language (UNL) as an interlingua. Implemented using Python, the model demonstrates effective results in cross-lingual searches from English to Spanish, provided high-quality dictionaries are used.", url: "https://github.com/themrcesi/tfm", image: "/upm-tfm.png"},
     { name: "Development of Aggregation Methods of Partially Ordered Sets", description: "Partially ordered sets are collections in which elements are not totally ordered, introducing uncertainty in their structure. This project focuses on developing new aggregation algorithms for these sets, implemented in C#. The algorithms aim to improve the processing and interpretation of partially ordered data, contributing to advancements in computational methods for uncertain data structures.", url: "https://digibuo.uniovi.es/dspace/bitstream/handle/10651/62005/TFG_CesarGarciaCabeza.pdf?sequence=6&isAllowed=y", image: "/uniovi-tfg.png"},
   ]
 
-  const SkillLevel = ({ level }) => {
-    const levels = {
+  const SkillLevel = ({ level }: {level: 'Basic' | 'Intermediate' | 'Advanced'}) => {
+    const levels: { [key in 'Basic' | 'Intermediate' | 'Advanced']: number } = {
       "Basic": 1,
       "Intermediate": 2,
       "Advanced": 3
@@ -162,6 +170,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 font-sans">
+      <Head>
+          <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Toaster position="bottom-right" />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-gray-800 shadow-md z-10">
@@ -177,7 +188,7 @@ export default function Home() {
       {/* Header/Landing Section */}
       <header className="h-screen flex flex-col items-center justify-center text-center p-4 pt-16 bg-gradient-to-b from-gray-800 to-gray-900">
         <h1 className="text-4xl md:text-4xl font-bold mb-4 text-gray-100">
-          👋 Hello, I'm César García Cabeza
+          👋 Hello, I&apos;m César García Cabeza
         </h1>
         <div className="text-3xl font-bold mb-8 h-20">
           <ReactTyped
@@ -319,8 +330,8 @@ export default function Home() {
           <div className="max-w-md mx-auto">
             <form className="space-y-4" action="https://formspree.io/f/xvgpvppq" method="POST" onSubmit={handleSubmit}>
               <Input type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
-              <Input type="email" placeholder="Email" name='email' value={formData.email} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
-              <Textarea placeholder="Message" name='message' value={formData.message} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
+              <Input type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
+              <Textarea placeholder="Message" name="message" value={formData.message} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
               <Button type="submit" className="w-full rounded-md bg-gray-700 hover:bg-gray-600 text-gray-100">
                 Send Message
                 <SendIcon className="ml-2 h-4 w-4" />

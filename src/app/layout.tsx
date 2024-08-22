@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/favicon.png',  // Optional, if you have an apple-touch-icon
+    apple: '/favicon.ico',  // Optional, if you have an apple-touch-icon
     other: [
       {
         rel: 'icon',
