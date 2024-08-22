@@ -170,9 +170,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 font-sans">
-      <Head>
-          <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Toaster position="bottom-right" />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-gray-800 shadow-md z-10">

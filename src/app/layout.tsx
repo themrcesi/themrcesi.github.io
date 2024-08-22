@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     },
   ],
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',  // Optional, if you have an apple-touch-icon
+    icon: 'favicon.png',
+    shortcut: 'favicon.png',
+    apple: 'favicon.png',  // Optional, if you have an apple-touch-icon
     other: [
       {
         rel: 'icon',
-        url: '/favicon.ico',
+        url: 'favicon.png',
       },
     ],
   },
