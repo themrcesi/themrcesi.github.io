@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "César García Cabeza - Data Scientist | Software Engineer",
-  description: "Welcome to my portfolio. I am a Data Scientist specializing in AI, Cloud Data Engineering, and Data Science. Explore my projects and experience.",
+  description: "César García Cabeza's personal website",
   keywords: [
     "César García Cabeza",
     "César García",
