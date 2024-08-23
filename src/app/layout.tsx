@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   title: "César García Cabeza - Data Scientist | Software Engineer",
   description: "Welcome to my portfolio. I am a Data Scientist specializing in AI, Cloud Data Engineering, and Data Science. Explore my projects and experience.",
   keywords: [
+    "César García Cabeza",
+    "César García",
     'Data Science',
     'Artificial Intelligence',
     'Cloud Data Engineering',
