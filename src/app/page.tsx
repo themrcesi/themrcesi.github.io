@@ -31,6 +31,14 @@ export default function Home() {
     }))
   }
 
+  const event = ({ action, category, label, value }: any) => {
+    (window as any).gtag('event', action, {
+      event_category: category,
+      event_label: label,
+      value: value,
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically send the form data to a server
@@ -42,6 +50,12 @@ export default function Home() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
+    });
+    event({
+      action: 'contact_form',
+      category: 'ecommerce',
+      label: 'Contact form submitted',
+      value: formData.name,
     });
     // Clear the form fields
     setFormData({
