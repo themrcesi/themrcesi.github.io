@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react"
-import { Shuffle, CalendarCog, Signpost, SlidersHorizontal, Settings, Star, MonitorCog, ChartNoAxesCombined, ChevronDownIcon, LinkedinIcon, GithubIcon, SendIcon, CloudIcon, DatabaseIcon, ServerIcon, BoxIcon, PlayIcon, TerminalIcon, DownloadIcon, GraduationCapIcon, ExternalLinkIcon, UserIcon, UsersIcon, BrainIcon, LightbulbIcon } from "lucide-react"
+import { Shuffle, CalendarCog, Signpost, SlidersHorizontal, Settings, Star, MonitorCog, ChartNoAxesCombined, ChevronDownIcon, LinkedinIcon, GithubIcon, SendIcon, CloudIcon, DatabaseIcon, ServerIcon, BoxIcon, PlayIcon, TerminalIcon, DownloadIcon, GraduationCapIcon, ExternalLinkIcon, UserIcon, UsersIcon, BrainIcon, LightbulbIcon, CalendarIcon, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -11,6 +11,7 @@ import ReactMarkdown from "react-markdown"
 import { ReactTyped } from "react-typed";
 import toast, { Toaster } from "react-hot-toast"
 import Head from "next/head";
+import Header from "@/components/Header"
 
 
 export default function Home() {
@@ -168,26 +169,52 @@ export default function Home() {
     return <div className="flex space-x-1">{dots}</div>
   }
 
+  // Add this function to handle Calendly popup
+  const openCalendly = useCallback(() => {
+    // @ts-ignore
+    if (window.Calendly) {
+      // @ts-ignore
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/cesar-gar-cabeza/30min' });
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = (e: Event) => {
+      e.preventDefault()
+      const target = e.target as HTMLAnchorElement
+      const targetId = target.getAttribute('href')
+      if (targetId && targetId.startsWith('#')) {
+        const targetElement = document.querySelector(targetId)
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    }
+
+    const links = document.querySelectorAll('a[href^="#"]')
+    links.forEach(link => {
+      link.addEventListener('click', handleScroll)
+    })
+
+    return () => {
+      links.forEach(link => {
+        link.removeEventListener('click', handleScroll)
+      })
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 font-sans">
       <Toaster position="bottom-right" />
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-gray-800 shadow-md z-10">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold">César García Cabeza</h1>
-          {/* <Button variant="outline" className="rounded-full border-gray-300 text-gray-300 hover:bg-gray-700">
-            Download CV
-            <DownloadIcon className="ml-2 h-4 w-4" />
-          </Button> */}
-        </div>
-      </header>
+      
+      <Header />
 
       {/* Header/Landing Section */}
-      <header className="h-screen flex flex-col items-center justify-center text-center p-4 pt-16 bg-gradient-to-b from-gray-800 to-gray-900">
-        <h1 className="text-4xl md:text-4xl font-bold mb-4 text-gray-100">
+      <header className="h-screen flex flex-col items-center justify-center text-center p-4 pt-16 bg-gradient-to-b from-gray-800 to-gray-900" id="home">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-100">
           👋 Hello, I&apos;m César García Cabeza
         </h1>
-        <div className="text-3xl font-bold mb-8 h-20">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 h-20">
           <ReactTyped
             strings={titles}
             typeSpeed={40}
@@ -195,36 +222,39 @@ export default function Home() {
             loop
           />
         </div>
-        <Button onClick={scrollToAbout} className="rounded-full bg-gray-700 hover:bg-gray-600 text-gray-100">
+        <Button onClick={scrollToAbout} className="text-sm sm:text-base rounded-full bg-gray-700 hover:bg-gray-600 text-gray-100">
           Learn More
           <ChevronDownIcon className="ml-2 h-4 w-4" />
         </Button>
       </header>
 
       {/* About Me Section */}
-      <section ref={aboutRef} className="py-20 bg-gray-800">
+      <section className="py-16 sm:py-20 bg-gray-800" id="about">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-100">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-gray-100">About Me</h2>
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
             <div className='space-y-4'>
-              <p className="text-lg leading-relaxed text-gray-300">
-                With a foundation in Computer Software Engineering, sparked by a deep love for video games, I initially embarked on a journey in software development. However, during the transformative deep learning boom, my career trajectory shifted toward data science and artificial intelligence. This new direction inspired me to pursue two Master’s degrees—one in Artificial Intelligence and another in Cloud Data Science & Data Engineering. My academic curiosity also led me to begin a PhD in Information Technologies, where I focused on leveraging AI techniques to automate systematic literature reviews. Despite the allure of academia, I ultimately chose to return to industry to apply my skills in real-world, practical settings.
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 text-justify">
+                With a foundation in Computer Software Engineering, sparked by a deep love for video games, I initially embarked on a journey in software development. However, during the transformative deep learning boom, my career trajectory shifted toward data science and artificial intelligence. This new direction inspired me to pursue two Master's degrees—one in Artificial Intelligence and another in Cloud Data Science & Data Engineering. My academic curiosity also led me to begin a PhD in Information Technologies, where I focused on leveraging AI techniques to automate systematic literature reviews. Despite the allure of academia, I ultimately chose to return to industry to apply my skills in real-world, practical settings.
               </p>
-              <p className="text-lg leading-relaxed text-gray-300">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 text-justify">
                 Today, I work as a Data Scientist at a leading SEM agency, where I harness the power of data to drive impactful, data-informed marketing strategies. My passion lies at the intersection of software engineering and data science/engineering, where I explore how these fields can revolutionize industries.
               </p>
-              <p className="text-lg leading-relaxed text-gray-300">
-                Looking ahead, I aspire to lead a data team, fostering growth and collaboration to achieve collective success. As a versatile and curious professional, I continually seek out new technologies and challenges, embodying a T-shaped skill set that bridges multiple domains. My relentless drive to learn and achieve means that when I set my sights on a goal, I don’t stop until it’s accomplished.
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 text-justify">
+                Looking ahead, I aspire to lead a data team, fostering growth and collaboration to achieve collective success. As a versatile and curious professional, I continually seek out new technologies and challenges, embodying a T-shaped skill set that bridges multiple domains. My relentless drive to learn and achieve means that when I set my sights on a goal, I don't stop until it's accomplished.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 text-justify">
+                In addition to my full-time role, I'm actively seeking side projects where I can apply my technical knowledge and expertise. If you have a project that could benefit from my skills in data science, AI, or software engineering, I'd love to hear about it. Feel free to use the scheduling tool in the <a href="#contact" className="text-green-400 hover:underline" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>contact section</a> to book a time for us to discuss potential collaborations.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-100">Technical Skills</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-gray-100">Technical Skills</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {skills.map((skill) => (
                   <div key={skill.name} className="flex items-center justify-between space-x-2 bg-gray-700 rounded-lg p-3 shadow-md">
                     <div className="flex items-center space-x-2">
                       {skill.icon}
-                      <span className="font-medium text-gray-200">{skill.name}</span>
+                      <span className="text-sm sm:text-base font-medium text-gray-200">{skill.name}</span>
                     </div>
                     <SkillLevel level={skill.level} />
                   </div>
@@ -236,16 +266,16 @@ export default function Home() {
       </section>
 
       {/* Soft Skills Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-16 sm:py-20 bg-gray-900" id="soft-skills">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-100">Soft Skills</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-gray-100">Soft Skills</h2>
           <div className="grid grid-cols-2 sm:grid-cols-6 gap-8">
             {softSkills.map((skill) => (
               <div key={skill.name} className="flex flex-col items-center text-center">
                 <div className="bg-gray-700 rounded-full p-4 mb-4">
                   {skill.icon}
                 </div>
-                <span className="font-medium text-gray-200">{skill.name}</span>
+                <span className="text-sm sm:text-base font-medium text-gray-200">{skill.name}</span>
               </div>
             ))}
           </div>
@@ -253,19 +283,19 @@ export default function Home() {
       </section>
 
       {/* Experience Timeline Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-16 sm:py-20 bg-gray-800" id="experience">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-100">Experience</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-gray-100">Experience</h2>
           <div className="relative">
             {experience.map((job, index) => (
-              <Card key={index} className="mb-8 ml-4 p-6 rounded-lg shadow-md relative before:content-[''] before:absolute before:left-[-20px] before:top-1/2 before:w-4 before:h-4 before:bg-gray-600 before:rounded-full hover:shadow-lg transition-shadow bg-gray-700 border-gray-600">
-                <div className="text-sm text-gray-400 mb-2">{job.startDate} - {job.endDate}</div>
-                <h3 className="text-xl font-semibold mb-1 text-gray-100">{job.position}</h3>
-                <Link href={job.website} target="_blank" rel="noopener noreferrer" className="text-gray-300 mb-2 flex items-center hover:underline">
+              <Card key={index} className="mb-8 ml-4 p-4 sm:p-6 rounded-lg shadow-md relative before:content-[''] before:absolute before:left-[-20px] before:top-1/2 before:w-4 before:h-4 before:bg-gray-600 before:rounded-full hover:shadow-lg transition-shadow bg-gray-700 border-gray-600">
+                <div className="text-xs sm:text-sm text-gray-400 mb-2">{job.startDate} - {job.endDate}</div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 text-gray-100">{job.position}</h3>
+                <Link href={job.website} target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-gray-300 mb-2 flex items-center hover:underline">
                   {job.company}
                   <ExternalLinkIcon className="ml-2 h-4 w-4" />
                 </Link>
-                <div className="text-gray-300 markdown-content">
+                <div className="text-xs sm:text-sm md:text-base text-gray-300 markdown-content">
                   <ReactMarkdown>{job.description}</ReactMarkdown>
                 </div>
               </Card>
@@ -276,20 +306,20 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-16 sm:py-20 bg-gray-900" id="education">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-100">Education</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-gray-100">Education</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {education.map((edu, index) => (
               <Link href={edu.website} key={index} target="_blank" rel="noopener noreferrer">
                 <Card className="p-6 flex flex-col h-full items-center text-center hover:shadow-lg transition-shadow bg-gray-700 border-gray-600">
                   {edu.icon}
-                  <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-100">{edu.degree}</h3>
-                  <p className="text-gray-300 flex items-center">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mt-4 mb-2 text-gray-100">{edu.degree}</h3>
+                  <p className="text-sm sm:text-base text-gray-300 flex items-center">
                     {edu.institution}
                     <ExternalLinkIcon className="ml-2 h-4 w-4" />
                   </p>
-                  <p className="text-gray-400 mt-2 mt-auto">{edu.year}</p>
+                  <p className="text-xs sm:text-sm text-gray-400 mt-2 mt-auto">{edu.year}</p>
                 </Card>
               </Link>
             ))}
@@ -298,17 +328,17 @@ export default function Home() {
       </section>
 
       {/* Projects/Blog Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-16 sm:py-20 bg-gray-800" id="projects">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-100">Projects</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-gray-100">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, i) => (
               <Link key={i} href={project.url} target="_blank">
                 <Card key={i} className="flex flex-col h-full rounded-lg overflow-hidden shadow-md transition-transform hover:scale-105 bg-gray-700 border-gray-600">
                   <img src={project.image} alt={`Project ${i}`} className="w-full h-48 object-cover" />
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-100">{project.name}</h3>
-                    <p className="text-gray-300 mb-4 flex-grow">{project.description}</p>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 text-gray-100">{project.name}</h3>
+                    <p className="text-sm sm:text-base text-gray-300 mb-4 flex-grow">{project.description}</p>
                     <Button variant="outline" className="w-full border-gray-500 text-gray-300 hover:bg-gray-600 mt-auto self-start">Read More</Button>
                   </div>
                   
@@ -321,34 +351,53 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-16 sm:py-20 bg-gray-900" id="contact">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-100">Contact</h2>
-          <div className="max-w-md mx-auto">
-            <form className="space-y-4" action="https://formspree.io/f/xvgpvppq" method="POST" onSubmit={handleSubmit}>
-              <Input type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
-              <Input type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
-              <Textarea placeholder="Message" name="message" value={formData.message} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
-              <Button type="submit" className="w-full rounded-md bg-gray-700 hover:bg-gray-600 text-gray-100">
-                Send Message
-                <SendIcon className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
-            <div className="flex justify-center space-x-4 mt-8">
-              <a target="_blank" href="https://www.linkedin.com/in/cesargarciacabeza/" className="text-gray-400 hover:text-gray-200 transition-colors">
-                <LinkedinIcon className="h-6 w-6" />
-              </a>
-              <a target="_blank" href="https://github.com/themrcesi" className="text-gray-400 hover:text-gray-200 transition-colors">
-                <GithubIcon className="h-6 w-6" />
-              </a>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-gray-100">Contact</h2>
+          <div className="space-y-8">
+            <div>
+              <form className="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xvgpvppq" method="POST" onSubmit={handleSubmit}>
+                <Input type="text" placeholder="Name" name="name" value={formData.name} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
+                <Input type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
+                <Textarea placeholder="Message" name="message" value={formData.message} onChange={handleInputChange} className="w-full rounded-md bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400" />
+                <Button type="submit" className="w-full rounded-md bg-gray-700 hover:bg-gray-600 text-gray-100">
+                  Send Message
+                  <SendIcon className="ml-2 h-4 w-4" />
+                </Button>
+              </form>
             </div>
+            <div className="text-center text-gray-400 text-xl">
+              - or -
+            </div>
+            <div>
+              <div className="bg-gray-800 rounded-lg p-6 shadow-md max-w-md mx-auto">
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <div className="flex items-center mb-4">
+                  <CalendarIcon className="h-8 w-8 text-gray-300 mr-3" />
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-100">Schedule an Appointment</h3>
+                </div>
+                <p className="text-sm sm:text-base text-gray-300 mb-4">Book a time to discuss your project or any questions you may have.</p>
+                <Button onClick={openCalendly} className="w-full rounded-md bg-gray-700 hover:bg-gray-600 text-gray-100">
+                  Book Now
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center space-x-4 mt-8">
+            <a target="_blank" href="https://www.linkedin.com/in/cesargarciacabeza/" className="text-gray-400 hover:text-gray-200 transition-colors">
+              <LinkedinIcon className="h-6 w-6" />
+            </a>
+            <a target="_blank" href="https://github.com/themrcesi" className="text-gray-400 hover:text-gray-200 transition-colors">
+              <GithubIcon className="h-6 w-6" />
+            </a>
           </div>
         </div>
       </section>
 
       <footer className="bg-gray-800 text-gray-400 py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} César García Cabeza. All rights reserved.</p>
+          <p className="text-sm sm:text-base">&copy; {new Date().getFullYear()} César García Cabeza. All rights reserved.</p>
         </div>
       </footer>
     </div>
