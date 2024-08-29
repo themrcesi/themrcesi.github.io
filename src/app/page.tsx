@@ -229,7 +229,7 @@ export default function Home() {
       </header>
 
       {/* About Me Section */}
-      <section className="py-16 sm:py-20 bg-gray-800" id="about">
+      <section ref={aboutRef} className="py-16 sm:py-20 bg-gray-800" id="about">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center text-gray-100">About Me</h2>
           <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
