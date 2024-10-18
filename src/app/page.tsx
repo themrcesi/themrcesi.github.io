@@ -12,6 +12,7 @@ import { ReactTyped } from "react-typed";
 import toast, { Toaster } from "react-hot-toast"
 import Head from "next/head";
 import Header from "@/components/Header"
+import {event} from "@/lib/utils"
 
 
 export default function Home() {
@@ -36,6 +37,10 @@ export default function Home() {
     e.preventDefault()
     // Here you would typically send the form data to a server
     console.log("Form submitted:", formData)
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error("Please fill all form fields");
+      return;
+    }
     const form = e.target as HTMLFormElement;
     await fetch(form.action, {
       method: "POST",
@@ -44,6 +49,7 @@ export default function Home() {
       },
       body: JSON.stringify(formData),
     });
+    event({ action: 'user_contact', category: 'click', label: 'message', value: 1 });
     // Clear the form fields
     setFormData({
       name: "",
@@ -125,7 +131,7 @@ export default function Home() {
       company: "Biomedichal Informatics Group (Polytechnic University of Madrid)", 
       website: "http://gib.fi.upm.es/", 
       startDate: "Sep 2020", 
-      endDate: "Sep 2020 2020", 
+      endDate: "Sep 2020", 
       description: "I conducted an internship during the first month of my master&apos;s degree within the Biomedical Research Group. This experience provided valuable insights into medical data integration and helped shape my career interests.\n\n-  Learned about medical data integration tools using terminologies such as LOINC, ICD-10, and SNOMED\n\n- Gained exposure to the complexities of biomedical data\n\n- Realized a stronger interest in natural language processing, leading to a career shift\n\nTech stack: Python, Tableau" 
     },
     { 
@@ -171,6 +177,7 @@ export default function Home() {
 
   // Add this function to handle Calendly popup
   const openCalendly = useCallback(() => {
+    event({ action: 'user_contact', category: 'click', label: 'calendly', value: 1 });
     // @ts-ignore
     if (window.Calendly) {
       // @ts-ignore
